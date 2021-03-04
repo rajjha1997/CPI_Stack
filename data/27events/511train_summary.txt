@@ -1,0 +1,30 @@
+(base) cr@brown-boson:~/workdesk/cpistack_bk/spec/SPEC2017/benchspec/CPU/511.povray_r/run/run_base_train_hpca-m64.0000$ ~/record ./run.sh 100 && perf stat -d -d -d ./run.sh
+Close all the other programs before running it. Running perf stat record. Redirecting error stream to err.txt. Output being written to op.txt
+
+ Performance counter stats for './run.sh':
+
+       9440.593204      task-clock (msec)         #    1.000 CPUs utilized
+                13      context-switches          #    0.001 K/sec
+                 0      cpu-migrations            #    0.000 K/sec
+               838      page-faults               #    0.089 K/sec
+       20032759271      cycles                    #    2.122 GHz                      (22.20%)
+        6604391737      stalled-cycles-frontend   #   32.97% frontend cycles idle     (22.25%)
+        2368873690      stalled-cycles-backend    #   11.82% backend cycles idle      (22.29%)
+       28202130326      instructions              #    1.41  insn per cycle
+                                                  #    0.23  stalled cycles per insn  (27.85%)
+        4516006443      branches                  #  478.360 M/sec                    (27.85%)
+         158894935      branch-misses             #    3.52% of all branches          (27.85%)
+        9652718993      L1-dcache-loads           # 1022.470 M/sec                    (27.80%)
+         623630775      L1-dcache-load-misses     #    6.46% of all L1-dcache hits    (27.76%)
+           8111060      LLC-loads                 #    0.859 M/sec                    (22.20%)
+             11774      LLC-load-misses           #    0.00% of all LL-cache hits     (22.20%)
+       14471618498      L1-icache-loads           # 1532.914 M/sec                    (22.20%)
+         386217473      L1-icache-load-misses                                         (22.20%)
+        9662565667      dTLB-loads                # 1023.513 M/sec                    (22.20%)
+          18803174      dTLB-load-misses          #    0.19% of all dTLB cache hits   (22.20%)
+       28269920458      iTLB-loads                # 2994.507 M/sec                    (22.20%)
+            179564      iTLB-load-misses          #    0.00% of all iTLB cache hits   (22.20%)
+         351737533      L1-dcache-prefetches      #   37.258 M/sec                    (22.20%)
+          68262918      L1-dcache-prefetch-misses #    7.231 M/sec                    (22.20%)
+
+       9.441695053 seconds time elapsed
