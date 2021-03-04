@@ -4,3 +4,8 @@ Hardware events like cache misses,branch misses are good indicators of the behav
 Understanding the contribution of these events to the performance of the application would enable developers to focus on the areas of the application that need improvement.
 
 This work aims to break down the contribution of hardware events to the average cycles per instruction taken by the application.
+
+
+## Contributor:
+1. Raj Jha
+2. Chethan Ravindranath
